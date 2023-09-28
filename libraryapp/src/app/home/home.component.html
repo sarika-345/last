@@ -1,0 +1,14 @@
+<br><br><br>
+  <div style=" border:4px solid green ;height: 550px; width: 400px;position: absolute;left:35%;">
+  <div class="p"><br>
+    <div *ngIf="isAuthenticated==true">
+  <button style="height: 50px;width: 200px; position: relative; background-color: lightseagreen;" class="m-3 btn-btn-secondary" (click)="view()">View book</button><br><br>
+  <button style="height: 50px;width: 200px; position: relative;  background-color: lightseagreen;" class="m-3 btn-btn-secondary" (click)="add()">Add book</button><br><br>
+  <button style="height: 50px;width: 200px; position: relative;  background-color: lightseagreen;" class="m-3 btn-btn-secondary" (click)="logout()">Logout</button>
+</div>
+<div *ngIf="isAuthenticated==false">
+  <button style="height: 50px;width: 200px; position: relative;  background-color: lightseagreen;" class="m-3 btn-btn-secondary" (click)="reg()">Register</button><br><br>
+  <button style="height: 50px;width: 200px; position: relative;  background-color: lightseagreen;" class="m-3 btn-btn-secondary" (click)="log()">Login</button>
+</div>
+</div></div>
+<router-outlet></router-outlet>

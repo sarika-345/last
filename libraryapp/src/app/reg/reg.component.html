@@ -1,0 +1,17 @@
+<H1>REGISTER</H1>
+
+<form #form="ngForm" (ngSubmit)="onsubmit()">
+    <div class="mb-3">
+        <label class="form-label">USERNAME</label>
+        <input type="text" required class="form-control" name="username" #username="ngModel" [(ngModel)]="data.username" placeholder="Enter the username">
+        <label class="text-danger" *ngIf="form.submitted && username.errors ?.['required']">Title is required</label>
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">PASSWORD</label>
+        <input type="password" required class="form-control" name="password" #password="ngModel" [(ngModel)]="data.password" placeholder="Enter Password">
+        <label class="text-danger" *ngIf="form.submitted && password.errors ?.['required']">Author name is required</label>
+      </div>
+      <div class="mb-3">
+        <input type="submit" class="form-control">
+      </div>
+    </form>

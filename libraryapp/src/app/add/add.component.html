@@ -1,0 +1,22 @@
+<H1>ADD BOOK</H1>
+
+<form #form="ngForm" (ngSubmit)="onsubmit()">
+<div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" required class="form-control" name="Title" #Title="ngModel" [(ngModel)]="data.title" placeholder="Name of book">
+    <label class="text-danger" *ngIf="form.submitted && Title.errors ?.['required']">Title is required</label>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Author</label>
+    <input type="text" required class="form-control" name="Author" #Author="ngModel" [(ngModel)]="data.author" placeholder="Name of author">
+    <label class="text-danger" *ngIf="form.submitted && Author.errors ?.['required']">Author name is required</label>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Price</label>
+    <input type="text" required class="form-control" name="Price" #Price="ngModel" [(ngModel)]="data.price" placeholder="Price of book">
+    <label class="text-danger" *ngIf="form.submitted && Price.errors ?.['required']">Price is required</label>
+  </div>
+  <div class="mb-3">
+    <input type="submit" class="form-control">
+  </div>
+</form>
